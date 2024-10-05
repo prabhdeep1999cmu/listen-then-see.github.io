@@ -243,7 +243,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video-based Question Answering (Video QA) is a challenging task and becomes even more intricate when addressing Socially Intelligent Question Answering (SIQA). SIQA requires context understanding, temporal reasoning, and the integration of multimodal information, but in addition, it requires processing nuanced human behavior. Furthermore, the complexities involved are exacerbated by the dominance of the primary modality (text) over the others. Thus, there is a need to help the task's secondary modalities to work in tandem with the primary modality. In this work, we introduce a cross-modal alignment and subsequent representation fusion approach that achieves state-of-the-art results (82.06\% accuracy) on the Social IQ 2.0 dataset for SIQA. Our approach exhibits an improved ability to leverage the video modality by using the audio modality as a bridge with the language modality. This leads to enhanced performance by reducing the prevalent issue of language overfitting and resultant video modality bypassing encountered by current existing techniques.  Our code and models are publicly available at: https://github.com/sts-vlcc/sts-vlcc
+            Video-based Question Answering (Video QA) is a challenging task 
+            and becomes even more intricate when addressing Socially 
+            Intelligent Question Answering (SIQA). SIQA requires context 
+            understanding, temporal reasoning, and the integration of
+            multimodal information, but in addition, it requires processing 
+            nuanced human behavior. Furthermore, the complexities involved 
+            are exacerbated by the dominance of the primary modality (text) 
+            over the others. Thus, there is a need to help the task's 
+            secondary modalities to work in tandem with the primary 
+            modality. In this work, we introduce a cross-modal alignment 
+            and subsequent representation fusion approach that achieves 
+            state-of-the-art results (82.06\% accuracy) on the Social 
+            IQ 2.0 dataset for SIQA. Our approach exhibits an improved 
+            ability to leverage the video modality by using the audio 
+            modality as a bridge with the language modality. This leads 
+            to enhanced performance by reducing the prevalent issue of 
+            language overfitting and resultant video modality bypassing 
+            encountered by current existing techniques.  Our code and models 
+            are publicly available at: https://github.com/sts-vlcc/sts-vlcc
           </p>
         </div>
       </div>
@@ -260,6 +278,19 @@
                  alt="final_architecture_image"/>
         </div>
       </div>
+      <h2 class="content has-text-justified"> 
+        The figure displays the proposed architecture. We run the Speaking 
+        Turn Sampling (STS) module to the aligned frame_i from 
+        the speaking turn k and the corresponding subtitle from 
+        the transcript. We pass this pair to the frozen CLIP encoder to 
+        obtain the visual and text encodings respectively. The resultant 
+        encodings are passed through the Vision Language Cross 
+        Contextualization (VLCC) module and subsequently passed through the 
+        projection layer to generate one of the inputs to the LLM. 
+        Simultaneously, we generate the text embeddings of size U 
+        for each question-answer pair, and the text embeddings of size 
+        V for the video subtitles.
+      </h2>
     </div>
     <!--/ Paper video. -->
   </div>
